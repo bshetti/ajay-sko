@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thank you</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      width: 1280px; height: 720px;
+      font-family: 'Inter', -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow: hidden;
+    }
+
+    body {
+      background: #2363F4 url('cover-bg.svg') center / cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    @keyframes slide-in {
+      from { opacity: 0; transform: translateX(-24px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .content {
+      position: relative;
+      z-index: 10;
+      padding: 0 77px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 65%;
+    }
+
+    .cover-title {
+      font-size: 96px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.08;
+      color: #fff;
+      opacity: 0;
+      animation: slide-in 0.75s ease forwards 0.4s;
+    }
+
+    .cover-footer {
+      position: relative;
+      z-index: 10;
+      padding: 28px 77px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      opacity: 0;
+      animation: fade-up 0.7s ease forwards 1.4s;
+    }
+
+    .elastic-logo { display: flex; align-items: center; gap: 12px; }
+    .elastic-wordmark { font-size: 21px; font-weight: 700; color: #fff; letter-spacing: -0.01em; }
+    .footer-divider { width: 1px; height: 28px; background: rgba(255,255,255,0.3); }
+    .footer-tagline { font-size: 12px; color: rgba(255,255,255,0.7); line-height: 1.4; }
+  </style>
+</head>
+<body>
+
+  <div class="content">
+    <h1 class="cover-title">Thank you</h1>
+  </div>
+
+  <div class="cover-footer">
+    <div class="elastic-logo">
+      <svg width="42" height="41" viewBox="0 0 245 236" xmlns="http://www.w3.org/2000/svg">
+        <path d="M236.6 123.5a46.54 46.54 0 0 0-30.8-43.9A67 67 0 0 0 140.2 0 66.72 66.72 0 0 0 86 27.7a35.5 35.5 0 0 0-57.2 28.1A36.77 36.77 0 0 0 31 68.2a46.75 46.75 0 0 0-.1 88 66.66 66.66 0 0 0 119.6 51.6 35 35 0 0 0 21.7 7.6 35.51 35.51 0 0 0 35.5-35.5 36.77 36.77 0 0 0-2.2-12.4 47.08 47.08 0 0 0 31.1-44" fill="#fff"/>
+        <path d="M93 101.5l51.8 23.6L197 79.3a54.71 54.71 0 0 0 1.1-11.5 58.35 58.35 0 0 0-106.5-33l-8.7 45.1L93 101.5z" fill="#fed10a"/>
+        <path d="M39.4 156.3a56.62 56.62 0 0 0-1.1 11.7 58.58 58.58 0 0 0 107 32.9l8.6-44.9-11.5-22-52-23.7z" fill="#24bbb1"/>
+        <path d="M39.1 66.7l35.5 8.4 7.8-40.3a28 28 0 0 0-43.3 31.9" fill="#ef5098"/>
+        <path d="M36 75.2a39.1 39.1 0 0 0-1.7 73.7l49.8-45L75 84.4z" fill="#17a8e0"/>
+        <path d="M154.3 200.9a28 28 0 0 0 43.2-31.9l-35.4-8.3z" fill="#93c83e"/>
+        <path d="M161.5 151.4l39 9.1a39.1 39.1 0 0 0 1.7-73.7l-51 44.7z" fill="#0779a1"/>
+      </svg>
+      <span class="elastic-wordmark">elastic</span>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-tagline">The Search<br>AI Company</div>
+  </div>
+
+<script src="/js/fuckslides.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HOW: Your toolset for success</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      width: 1280px; height: 720px;
+      font-family: 'Inter', -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow: hidden;
+    }
+
+    body {
+      background: url('blue-chapter-background.png') center / cover no-repeat;
+      display: flex;
+      align-items: center;
+    }
+
+    .content {
+      padding: 0 80px;
+      max-width: 68%;
+      opacity: 0;
+      animation: slide-in 0.75s ease forwards 0.3s;
+    }
+
+    @keyframes slide-in {
+      from { opacity: 0; transform: translateX(-20px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+
+    .label {
+      display: block;
+      font-size: 96px;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      color: #5EE6C8;
+      margin-bottom: 16px;
+    }
+
+    .subtitle {
+      font-size: 52px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.12;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="content">
+    <span class="label">HOW:</span>
+    <p class="subtitle">Your toolset for<br>success</p>
+  </div>
+
+<script src="/js/fuckslides.js"></script>
+</body>
+</html>

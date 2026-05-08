@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Net-new VS existing customers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 1280px; height: 720px;
+      font-family: 'Inter', -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow: hidden;
+      background: url('blue-normal-background.png') center / cover no-repeat;
+    }
+    .slide {
+      width: 1280px; height: 720px;
+      display: flex;
+      flex-direction: column;
+      padding: 52px 64px 52px;
+    }
+
+    .header { margin-bottom: 10px; }
+    .title {
+      font-size: 44px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+    .title .vs { color: #5EE6C8; }
+    .subtitle {
+      font-size: 18px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.8);
+      margin-top: 8px;
+    }
+
+    .panels {
+      flex: 1;
+      display: flex;
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    /* Left panel — teal filled */
+    .panel-left {
+      flex: 1;
+      background: #5EE6C8;
+      border-radius: 16px;
+      padding: 36px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .panel-left .panel-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: #0B1B3D;
+      letter-spacing: -0.01em;
+    }
+    .panel-left .panel-body { display: flex; flex-direction: column; gap: 20px; }
+    .panel-left .point { font-size: 16px; color: #0B1B3D; line-height: 1.55; }
+    .panel-left .point strong { font-weight: 800; }
+
+    /* Right panel — dark with teal border */
+    .panel-right {
+      flex: 1;
+      background: rgba(255,255,255,0.04);
+      border: 2px solid #5EE6C8;
+      border-radius: 16px;
+      padding: 36px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .panel-right .panel-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.01em;
+    }
+    .panel-right .panel-body { display: flex; flex-direction: column; gap: 20px; }
+    .panel-right .point { font-size: 16px; color: rgba(255,255,255,0.9); line-height: 1.55; }
+    .panel-right .point strong { font-weight: 800; color: #fff; }
+  </style>
+</head>
+<body>
+<div class="slide">
+  <div class="header">
+    <h1 class="title">Net-new <span class="vs">VS</span> existing customers</h1>
+    <p class="subtitle">Do we always start with Serverless?</p>
+  </div>
+
+  <div class="panels">
+    <div class="panel-left">
+      <div class="panel-title">Net-New Prospects</div>
+      <div class="panel-body">
+        <p class="point"><strong>The Default Path:</strong> Always lead with Elastic Cloud Serverless for new logos.</p>
+        <p class="point"><strong>The Focus:</strong> Fastest time to value, least operational burden, and continuous innovation.</p>
+      </div>
+    </div>
+
+    <div class="panel-right">
+      <div class="panel-title">Existing Customers</div>
+      <div class="panel-body">
+        <p class="point"><strong>The Strategy:</strong> Upsell based on operational relief, not a mandatory migration.</p>
+        <p class="point"><strong>The Trigger:</strong> Target teams bogged down by capacity planning, manual version upgrades, or wasted cloud spend.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/js/fuckslides.js"></script>
+</body>
+</html>

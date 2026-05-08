@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Winning today with Serverless</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 1280px; height: 720px;
+      font-family: 'Inter', -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow: hidden;
+      background: url('blue-normal-background.png') center / cover no-repeat;
+    }
+    .slide {
+      width: 1280px; height: 720px;
+      display: flex;
+      flex-direction: column;
+      padding: 40px 52px 36px;
+    }
+
+    .title {
+      font-size: 34px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+    .title .teal { color: #5EE6C8; }
+
+    .subtitle {
+      font-size: 14.5px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.72);
+      margin-bottom: 20px;
+    }
+
+    /* 4×2 grid */
+    .grid {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .box {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 16px 18px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .logo-wrap {
+      height: 36px;
+      display: flex;
+      align-items: center;
+    }
+    .logo-wrap img {
+      max-height: 36px;
+      max-width: 140px;
+      width: auto;
+      object-fit: contain;
+      object-position: left center;
+    }
+
+    /* Dark logos need inverting for dark bg */
+    .logo-invert { filter: brightness(0) invert(1); }
+
+    .box-text {
+      font-size: 12.5px;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.5;
+    }
+    .box-text p::before {
+      content: '· ';
+      color: #5EE6C8;
+      font-weight: 700;
+    }
+    .box-text p + p { margin-top: 4px; }
+  </style>
+</head>
+<body>
+<div class="slide">
+  <h1 class="title">Winning today with <span class="teal">Serverless</span></h1>
+  <p class="subtitle">Real clients that have improved the speed, simplified their workload and accelerated innovation.</p>
+
+  <div class="grid">
+
+    <!-- Hugging Face -->
+    <div class="box">
+      <div class="logo-wrap">
+        <img src="logo-huggingface.png" alt="Hugging Face">
+      </div>
+      <div class="box-text">
+        <p>Migrated from on-prem cluster to Serverless, o11y and security use case.</p>
+        <p>6.25TB/day ingest</p>
+      </div>
+    </div>
+
+    <!-- Yieldmo -->
+    <div class="box">
+      <div class="logo-wrap">
+        <img src="logo-yieldmo.svg" alt="Yieldmo">
+      </div>
+      <div class="box-text">
+        <p>Search, o11y and Security client</p>
+      </div>
+    </div>
+
+    <!-- Guidewire -->
+    <div class="box">
+      <div class="logo-wrap">
+        <img src="logo-guidewire.svg" alt="Guidewire" class="logo-invert">
+      </div>
+      <div class="box-text">
+        <p>Fully migrated off Exabeam (Jan 30)</p>
+        <p>Ingesting ~3.5 TB/day</p>
+      </div>
+    </div>
+
+    <!-- RevenueCat -->
+    <div class="box">
+      <div class="logo-wrap">
+        <img src="logo-revenuecat.svg" alt="RevenueCat">
+      </div>
+      <div class="box-text">
+        <p>40 TB / week</p>
+        <p>Top O11y customer</p>
+      </div>
+    </div>
+
+    <!-- Measured -->
+    <div class="box">
+      <div class="logo-wrap">
+        <img src="logo-measured.svg" alt="Measured" class="logo-invert">
+      </div>
+      <div class="box-text">
+        <p>Second biggest paying customer in March 2026</p>
+        <p>$160k ARR</p>
+      </div>
+    </div>
+
+    <!-- GitHub -->
+    <div class="box">
+      <div class="logo-wrap">
+        <img src="logo-github.png" alt="GitHub">
+      </div>
+      <div class="box-text">
+        <p>POC: Want to migrate their HUGE Elastic SM cluster, they want to stop managing it</p>
+      </div>
+    </div>
+
+    <!-- Liberty Global -->
+    <div class="box">
+      <div class="logo-wrap">
+        <img src="logo-libertyglobal.svg" alt="Liberty Global" class="logo-invert">
+      </div>
+      <div class="box-text">
+        <p>+92% Growth</p>
+        <p>$74K ARR (Jan) → $142K ARR (March)</p>
+      </div>
+    </div>
+
+    <!-- Wayfair -->
+    <div class="box">
+      <div class="logo-wrap">
+        <img src="logo-wayfair.png" alt="Wayfair">
+      </div>
+      <div class="box-text">
+        <p>Spun a Serverless project while on a call with our PM</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script src="/js/fuckslides.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Do less infrastructure, deliver more outcomes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 1280px; height: 720px;
+      font-family: 'Inter', -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow: hidden;
+      background: url('blue-normal-background.png') center / cover no-repeat;
+    }
+    .slide {
+      width: 1280px; height: 720px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      padding: 60px 72px;
+    }
+
+    /* ── Left: the OLD way ── */
+    .panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      padding: 36px 32px;
+      border-radius: 20px;
+    }
+    .panel.left  { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); }
+    .panel.right { background: rgba(94,230,200,0.08);  border: 1px solid rgba(94,230,200,0.3); }
+
+    .panel-icon { width: 96px; height: 96px; }
+
+    .panel-label {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+    }
+
+    .panel-heading {
+      font-size: 22px;
+      font-weight: 800;
+      color: #fff;
+      text-align: center;
+      line-height: 1.25;
+    }
+    .panel.right .panel-heading { color: #5EE6C8; }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+    }
+    .tag {
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12.5px;
+      font-weight: 600;
+    }
+    .tag.red   { background: rgba(220,60,60,0.25);  color: #ff8080; border: 1px solid rgba(220,60,60,0.4); }
+    .tag.teal  { background: rgba(94,230,200,0.15); color: #5EE6C8; border: 1px solid rgba(94,230,200,0.35); }
+
+    /* ── Arrow ── */
+    .arrow-wrap {
+      width: 100px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .arrow-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+  </style>
+</head>
+<body>
+<div class="slide">
+
+  <!-- Left: OLD way -->
+  <div class="panel left">
+    <span class="panel-label">The old way</span>
+    <!-- Server rack SVG -->
+    <svg class="panel-icon" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="8" y="10" width="80" height="14" rx="3" stroke="rgba(255,100,100,0.7)" stroke-width="2"/>
+      <rect x="8" y="28" width="80" height="14" rx="3" stroke="rgba(255,100,100,0.7)" stroke-width="2"/>
+      <rect x="8" y="46" width="80" height="14" rx="3" stroke="rgba(255,100,100,0.7)" stroke-width="2"/>
+      <rect x="8" y="64" width="80" height="14" rx="3" stroke="rgba(255,100,100,0.7)" stroke-width="2"/>
+      <circle cx="20" cy="17" r="3" fill="rgba(255,100,100,0.6)"/>
+      <circle cx="20" cy="35" r="3" fill="rgba(255,100,100,0.6)"/>
+      <circle cx="20" cy="53" r="3" fill="rgba(255,100,100,0.6)"/>
+      <circle cx="20" cy="71" r="3" fill="rgba(255,100,100,0.6)"/>
+      <!-- warning sign -->
+      <path d="M72 76 L84 76 L78 66 Z" fill="#FF6060" opacity="0.8"/>
+      <text x="78" y="74" text-anchor="middle" font-size="7" fill="#fff" font-weight="bold">!</text>
+    </svg>
+    <p class="panel-heading">Infrastructure<br>Management Overload</p>
+    <div class="tags">
+      <span class="tag red">Capacity planning</span>
+      <span class="tag red">Version upgrades</span>
+      <span class="tag red">Sharding</span>
+      <span class="tag red">Hardware provisioning</span>
+      <span class="tag red">OS & Networking</span>
+    </div>
+  </div>
+
+  <!-- Arrow -->
+  <div class="arrow-wrap">
+    <span class="arrow-label">Serverless shifts the work</span>
+    <svg width="60" height="28" viewBox="0 0 60 28" fill="none">
+      <path d="M2 14 H52" stroke="#5EE6C8" stroke-width="3" stroke-linecap="round"/>
+      <path d="M44 6 L58 14 L44 22" stroke="#5EE6C8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <!-- Right: NEW way -->
+  <div class="panel right">
+    <span class="panel-label">With Serverless</span>
+    <!-- Rocket SVG -->
+    <svg class="panel-icon" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M48 12 C48 12 62 24 62 48 L48 60 L34 48 C34 24 48 12 48 12Z" stroke="#5EE6C8" stroke-width="2.5" fill="rgba(94,230,200,0.1)"/>
+      <circle cx="48" cy="42" r="6" stroke="#5EE6C8" stroke-width="2" fill="none"/>
+      <path d="M38 60 L32 72 L44 68" stroke="#5EE6C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M58 60 L64 72 L52 68" stroke="#5EE6C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M44 68 C44 72 48 76 48 76 C48 76 52 72 52 68" stroke="#5EE6C8" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <p class="panel-heading">Focus on Use Cases,<br>Performance &amp; Outcomes</p>
+    <div class="tags">
+      <span class="tag teal">Use cases</span>
+      <span class="tag teal">Performance needs</span>
+      <span class="tag teal">Business outcomes</span>
+      <span class="tag teal">Innovation</span>
+      <span class="tag teal">Time to value</span>
+    </div>
+  </div>
+
+</div>
+<script src="/js/fuckslides.js"></script>
+</body>
+</html>

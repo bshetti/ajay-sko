@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FY27 - The year of Serverless</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 1280px; height: 720px;
+      font-family: 'Inter', -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow: hidden;
+      background: url('blue-normal-background.png') center / cover no-repeat;
+    }
+    .slide {
+      width: 1280px; height: 720px;
+      display: flex;
+      flex-direction: column;
+      padding: 52px 64px 52px;
+      gap: 28px;
+    }
+
+    .title {
+      font-size: 30px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.02em;
+    }
+
+    .grid {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .box {
+      background: #2363F4;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 28px 32px;
+    }
+    .box p {
+      font-size: 26px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+  </style>
+</head>
+<body>
+<div class="slide">
+  <h1 class="title">FY27 - The year of Serverless</h1>
+  <div class="grid">
+    <div class="box"><p>Enhanced Operator<br>Experience</p></div>
+    <div class="box"><p>Improved<br>Performance</p></div>
+    <div class="box"><p>Cost Efficiency</p></div>
+    <div class="box"><p>Improved Security</p></div>
+  </div>
+</div>
+<script src="/js/fuckslides.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Incentives for YOU & Your Customers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 1280px; height: 720px;
+      font-family: 'Inter', -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow: hidden;
+      background: url('blue-normal-background.png') center / cover no-repeat;
+    }
+    .slide {
+      width: 1280px; height: 720px;
+      display: flex;
+      flex-direction: column;
+      padding: 44px 56px 40px;
+      gap: 18px;
+    }
+
+    .title { font-size: 32px; font-weight: 800; color: #fff; letter-spacing: -0.02em; }
+
+    /* AE Bonus bar — two separate rounded cards */
+    .bonus-bar {
+      display: flex;
+      align-items: stretch;
+      gap: 10px;
+    }
+    .ae-pill {
+      background: #E91E8C;
+      border-radius: 10px;
+      padding: 14px 22px;
+      font-size: 16px;
+      font-weight: 800;
+      color: #fff;
+      white-space: nowrap;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .ae-pill .new { font-size: 15px; font-weight: 700; color: #ffd6ec; }
+    .bonus-desc {
+      background: rgba(35, 45, 80, 0.55);
+      border-radius: 10px;
+      padding: 14px 22px;
+      font-size: 16px;
+      color: rgba(255,255,255,0.92);
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+    .bonus-desc .highlight { color: #5EE6C8; font-weight: 700; }
+    .bonus-desc strong { font-weight: 700; color: #fff; }
+
+    /* Stack of cards */
+    .cards {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    /* Customer Incentives banner spans full width */
+    .banner {
+      background: #2363F4;
+      border-radius: 10px;
+      padding: 14px 0;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.02em;
+    }
+
+    /* Header row — five separate cards */
+    .row.headers {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      gap: 8px;
+      flex: 0 0 auto;
+    }
+
+    /* Data row — ONE continuous gray bar with internal columns */
+    .row.data-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .cell {
+      padding: 16px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 15px;
+      line-height: 1.35;
+      color: #fff;
+    }
+
+    /* Header row cells (separate cards) */
+    .cell.h-stage    { background: #1B44C8; border-radius: 10px; color: #fff; font-weight: 800; font-size: 17px; }
+    .cell.h-scenario { background: #5EE6C8; border-radius: 10px; color: #0B1B3D; font-weight: 800; font-size: 17px; }
+    .cell.h-cloud    { background: #2363F4; border-radius: 10px; color: #fff; padding: 14px; }
+    .cell.h-cloud img {
+      max-height: 28px;
+      width: auto;
+      filter: brightness(0) invert(1);
+    }
+    .cell.h-cloud.azure { display: flex; align-items: center; gap: 10px; justify-content: center; }
+    .cell.h-cloud.azure img { max-height: 26px; }
+    .cell.h-cloud.azure .word { font-size: 16px; font-weight: 700; }
+
+    /* Data row internal cells — no background, no gap, but with subtle dividers */
+    .cell.data {
+      background: transparent;
+      border-right: 1px solid rgba(255,255,255,0.06);
+    }
+    .cell.data:last-child { border-right: none; }
+    .cell.data.col-stage    { font-weight: 700; color: #fff; font-size: 15px; }
+    .cell.data.col-scenario { font-weight: 700; color: #fff; }
+  </style>
+</head>
+<body>
+<div class="slide">
+
+  <h1 class="title">Incentives for YOU &amp; Your Customers</h1>
+
+  <div class="bonus-bar">
+    <div class="ae-pill"><span class="new">New</span> AE Bonus</div>
+    <div class="bonus-desc">
+      <span><strong>Earn up to <span class="highlight">$5K Bonus</span></strong> when migrating Self Managed customers to Annual via Marketplaces</span>
+    </div>
+  </div>
+
+  <div class="cards">
+
+    <!-- Banner -->
+    <div class="banner">Customer Incentives</div>
+
+    <!-- Header row -->
+    <div class="row headers">
+      <div class="cell h-stage">Sales Stage</div>
+      <div class="cell h-scenario">Scenario</div>
+      <div class="cell h-cloud"><img src="logo-aws.svg" alt="AWS"></div>
+      <div class="cell h-cloud"><img src="logo-googlecloud.svg" alt="Google Cloud"></div>
+      <div class="cell h-cloud azure"><img src="logo-azure.svg" alt="Azure"><span class="word">Microsoft<br>Azure</span></div>
+    </div>
+
+    <!-- Data row 1 -->
+    <div class="row data-row">
+      <div class="cell data col-stage">Qualification –<br>EB Alignment</div>
+      <div class="cell data col-scenario">POC</div>
+      <div class="cell data">Up to $25k</div>
+      <div class="cell data">$5K</div>
+      <div class="cell data">Up to $25k</div>
+    </div>
+
+    <!-- Data row 2 -->
+    <div class="row data-row">
+      <div class="cell data col-stage">Engagement –<br>Proposal Negotiation</div>
+      <div class="cell data col-scenario">Workload Migration</div>
+      <div class="cell data">~5% of Elastic ACV</div>
+      <div class="cell data">10% ACV</div>
+      <div class="cell data">$5k – $175k</div>
+    </div>
+
+    <!-- Data row 3 -->
+    <div class="row data-row">
+      <div class="cell data col-stage">Validation +</div>
+      <div class="cell data col-scenario">First Time Purchase<br>on Marketplace</div>
+      <div class="cell data">2% TCV New Business<br>1% TCV Renewals</div>
+      <div class="cell data">3% ACV</div>
+      <div class="cell data">3% – 10% ACV</div>
+    </div>
+
+  </div>
+
+</div>
+<script src="/js/fuckslides.js"></script>
+</body>
+</html>

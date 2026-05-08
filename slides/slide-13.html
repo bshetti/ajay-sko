@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The SaaS Defensive Overlay</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 1280px; height: 720px;
+      font-family: 'Inter', -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow: hidden;
+      background: url('blue-normal-background.png') center / cover no-repeat;
+    }
+    .slide {
+      width: 1280px; height: 720px;
+      display: flex;
+      flex-direction: column;
+      padding: 44px 60px 40px;
+      gap: 0;
+    }
+
+    .title { font-size: 34px; font-weight: 800; color: #fff; letter-spacing: -0.02em; margin-bottom: 4px; }
+    .subtitle { font-size: 15px; font-weight: 400; color: rgba(255,255,255,0.7); margin-bottom: 28px; }
+
+    /* Three persona boxes */
+    .personas {
+      display: flex;
+      gap: 18px;
+      margin-bottom: 32px;
+    }
+
+    .persona-box {
+      flex: 1;
+      background: #5EE6C8;
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      min-height: 160px;
+    }
+
+    .persona-label {
+      padding: 20px 18px;
+      display: flex;
+      align-items: center;
+      flex: 1;
+    }
+    .persona-label p {
+      font-size: 17px;
+      font-weight: 800;
+      color: #0B1B3D;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+    }
+
+    .persona-img {
+      width: 140px;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    .persona-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      filter: brightness(1.05);
+    }
+
+    /* Bottom section */
+    .bottom { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 14px; }
+
+    .saas-warning {
+      font-size: 16px;
+      color: rgba(255,255,255,0.88);
+      line-height: 1.6;
+      max-width: 820px;
+    }
+    .saas-warning strong { color: #fff; }
+
+    .cta {
+      font-size: 22px;
+      font-weight: 800;
+      color: #5EE6C8;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+    }
+  </style>
+</head>
+<body>
+<div class="slide">
+  <h1 class="title">The SaaS Defensive Overlay</h1>
+  <p class="subtitle">Do we always start with Serverless?</p>
+
+  <div class="personas">
+    <div class="persona-box">
+      <div class="persona-label"><p>The<br>Unhappy<br>Operator</p></div>
+      <div class="persona-img"><img src="slide-10-background.png" alt="The Unhappy Operator"></div>
+    </div>
+    <div class="persona-box">
+      <div class="persona-label"><p>The Variable<br>Workload<br>Consumer</p></div>
+      <div class="persona-img"><img src="slide-11-background.png" alt="The Variable Workload Consumer"></div>
+    </div>
+    <div class="persona-box">
+      <div class="persona-label"><p>The<br>Platform<br>Innovator</p></div>
+      <div class="persona-img"><img src="slide-12-background.png" alt="The Platform Innovator"></div>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <p class="saas-warning">If you hear <strong>Datadog, New Relic, or CrowdStrike</strong> show up in your account, they aren't just selling tools—they're selling simplicity.</p>
+    <p class="cta">Great you're ready for Serverless!<br>Let's show you how Elastic can do better.</p>
+  </div>
+</div>
+<script src="/js/fuckslides.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stop selling infrastructure and start selling velocity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      width: 1280px; height: 720px;
+      font-family: 'Inter', -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow: hidden;
+    }
+
+    body {
+      background: url('green-chapter-background.png') center / cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .content {
+      text-align: center;
+      padding: 0 120px;
+      opacity: 0;
+      animation: fade-in 0.8s ease forwards 0.3s;
+    }
+
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .headline {
+      font-size: 58px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.12;
+      color: #1A3FA8;
+      margin-bottom: 28px;
+    }
+
+    .subline {
+      font-size: 38px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      color: #0B6B82;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="content">
+    <p class="headline">Stop selling infrastructure<br>and start selling velocity.</p>
+    <p class="subline">Serverless is the fastest<br>path to solution at scale.</p>
+  </div>
+
+<script src="/js/fuckslides.js"></script>
+</body>
+</html>
